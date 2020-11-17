@@ -54,11 +54,13 @@ document.querySelector("#mute").addEventListener("click", function() {
 });
 
 document.querySelector("#old").addEventListener("click", function() {
-	document.getElementById("myVideo").style.filter = "grayscale(100%)";
+	var vid = document.getElementById("myVideo");
+	vid.classList.add("oldTime");
 	console.log("Grayscale");
 });
 
 document.querySelector("#original").addEventListener("click", function() {
-	document.getElementById("myVideo").style.filter = "grayscale(0%)";
+	var vid = document.getElementById("myVideo");
+	vid.classList.remove("oldTime");
 	console.log("Original");
 });
